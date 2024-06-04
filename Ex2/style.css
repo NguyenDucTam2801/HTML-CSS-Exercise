@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Reddit Sans", sans-serif;
+}
+
+section {
+    background-color: #30022d;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+section::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-image: linear-gradient(90deg, #FF0592, #FFF6FB);
+    border-radius: 100%;
+    transform: translate(-200px, -200px);
+}
+
+section::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-image: linear-gradient(90deg, #FF0592, #FFF6FB);
+    border-radius: 100%;
+    transform: translate(200px, 200px);
+}
+
+.container {
+    position: relative;
+    z-index: 100;
+    width: 500px;
+    height: 300px;
+    transition: 10s;
+    transform-style:preserve-3d;
+}
+
+.container:hover{
+    transform: rotateY(180deg);
+}
+
+.container .card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    box-shadow: 0px 0px 20px #49243E;
+    backdrop-filter: blur(30px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: aliceblue;
+    backface-visibility: hidden;
+}
+
+.front-face .logo img {
+    width: 100px;
+}
+
+.logo h5 {
+    font-size: 25px;
+    font-weight: 600;
+
+}
+
+.front-face .card-chip .chip {
+    height: 60px;
+    width: 80px;
+    margin-left: 10px;
+}
+
+.front-face .logo .bank {
+    width: 80px;
+}
+
+.front-face header {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+
+}
+
+.front-face .logo {
+    display: flex;
+    align-items: center;
+}
+
+.front-face .card-chip {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 0;
+}
+
+.front-face .card-details{
+    margin-left: 20px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-details .footer{
+    display: flex ;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer .extra-info{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 7px;
+}
+
+.extra-info .date{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer .logo-debit img{
+    height: 70px;
+}
+
+.footer .logo-debit{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    align-items: end;
+    margin-right: 10px;
+    gap: 5px
+}
+
+.card-details .card-number{
+    font-size: 25px;
+}
+
+
+.card.back-face{
+    position: relative;
+    border: none;
+    transform: rotateY(180deg);
+}
+
+.card.back-face h5{
+    font-size: 11px;
+    margin-bottom: 10px;
+}
+
+.card.back-face .magnetic-strip{
+    background-color: dimgray;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+}
+
+.card.back-face .author-sign {
+    margin-top: 70px;
+}
+
+.card.back-face .signature{
+    width: 60%;
+    height: 40px;
+    background-image:repeating-linear-gradient(rgb(231, 223, 223),rgb(231, 223, 223) 3px, rgb(156, 151, 151) 0px, rgb(231, 223, 223) 9px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 2px;
+}
+
+.signature i{
+    margin-right: -40px;
+}
+
+.card.back-face .terms{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.terms img{
+    width: 50px;
+}
+
+.card.back-face .footer{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.card.back-face .footer .logo{
+    margin-right: 80px;
+}
+
+.card.back-face .logo img{
+    width: 50px;
+}
+
