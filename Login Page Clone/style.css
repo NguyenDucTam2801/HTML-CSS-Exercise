@@ -25,7 +25,7 @@ body{
 form{
     display: flex;
     flex-direction: column;
-    margin: 100px auto;
+    margin: 50px auto;
 }
 
 form label{
@@ -83,6 +83,8 @@ form input[type="submit"]:hover{
     font-size:xx-large;
 }
 
+
+
 .footer .images i[class="bx bxl-facebook-circle"]{
     color: #3b5998;
 }
@@ -106,7 +108,8 @@ form input[type="submit"]:hover{
 }
 
 .footer a {
-    float:right;
+    display: flex;
+    justify-content: center;
     color: var(--main-color);
     margin: 10px 0;
 }
