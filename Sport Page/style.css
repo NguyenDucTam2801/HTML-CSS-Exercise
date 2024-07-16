@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: boreder-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+}
+
+.navbar-container{
+    width: 90%;
+    margin: auto;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+li{
+    list-style: none;
+}
+
+.navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    flex-direction: row;
+    /* Padding 20px 0 */
+    padding: 20px 0;
+}
+
+.navbar h2 a{
+    font-weight:bolder;
+    font-size: larger;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    /* Wanna use justify-content: space-around that the parent div must have constant size */
+}
+
+nav ul li a:hover{
+    font-size: larger;
+    transition: ease-in-out 0.5s;
+}
+
+nav ul .cart{
+    padding: 15px 30px;
+    background-color: #333;
+    color:antiquewhite;
+    border-radius: 10px;
+    font-weight: bold;;
+}
+
+.main-content{
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.main-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.main-container div{
+    width: 100%;
+    /* Animation */
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.main-container div h2{
+    color: #2e58b1;
+    font-size: 30px;
+}
+
+.main-container div h1{
+    color:#ce4611;
+    font-size: 50px;
+}
+
+.main-container div p{
+    color: #333;
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.main-container div .btn{
+    padding: 20px 30px;
+    margin-top: 20px;
+    background-color: #ce4611;
+    color:antiquewhite;
+    font-weight: 500;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0px 2px 5px 2px #333;
+}
+
+
+.main-container div .btn:hover{
+    background-color: #ffffff;
+    color: #ce4611;
+    border: solid 2px #ce4611;
+    transition: ease-in-out 0.1s;
+}
+
+.main-container img{
+    width: 80%;
+}
